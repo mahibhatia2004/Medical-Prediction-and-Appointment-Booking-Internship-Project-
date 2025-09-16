@@ -1,0 +1,43 @@
+medpredict/
+├── README.md                  # main project readme
+├── LICENSE                    # license file (MIT recommended)
+├── .gitignore                 # git ignore patterns
+
+├── backend/                   # Node.js / Express backend
+│   ├── package.json
+│   ├── server.js
+│   ├── src/
+│   │   ├── routes/            # API route handlers
+│   │   ├── controllers/       # business logic
+│   │   ├── models/             # DB schemas/models
+│   │   └── utils/              # helper functions
+│   ├── config/
+│   │   └── db.js               # database connection config
+│   └── tests/
+
+├── frontend/                  # React frontend
+│   ├── package.json
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── index.jsx
+│   │   ├── pages/              # routes/pages (Home, Login, etc.)
+│   │   ├── components/         # reusable UI components
+│   │   └── styles/              # CSS / Tailwind configs
+│   └── public/
+
+├── ml-model/                  # Python ML microservice
+│   ├── model.pkl               # saved trained model
+│   ├── train.py                 # script to train the model
+│   ├── predict.py               # Flask/FastAPI endpoint to serve predictions
+│   └── requirements.txt
+
+├── docs/                       # documentation
+│   ├── design.md
+│   └── api-spec.md
+
+├── infra/                      # deployment/devops
+│   └── docker-compose.yml
+
+└── .github/                    # GitHub Actions workflows
+    └── workflows/
+        └── ci.yml
